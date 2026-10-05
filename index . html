@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>New Style Gents Beauty Parlour | Parsudih, Jamshedpur</title>
+
+    <meta name="description"
+          content="New Style Gents Beauty Parlour in Parsudih, Jamshedpur. Quality haircuts, beard styling, grooming, facial and hair spa services. Open 8 AM to 10 PM, Thursday closed.">
+
+    <style>
+
+        /* =========================
+           BASIC SETTINGS
+        ========================== */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #111;
+            color: white;
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================== */
+
+        header {
+            background: #111;
+            text-align: center;
+            padding: 20px 15px;
+            border-bottom: 1px solid #444;
+        }
+
+        header img.logo {
+            width: 150px;
+            max-width: 100%;
+            display: block;
+            margin: 0 auto 10px auto;
+        }
+
+        header h1 {
+            color: #d4af37;
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================== */
+
+        nav {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 14px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+            background: #222;
+        }
+
+
+        /* =========================
+           AI FEATURE IMAGE
+        ========================== */
+
+        .feature-image {
+            width: 100%;
+            max-width: 1200px;
+            height: 500px;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto;
+        }
+
+
+        /* =========================
+           GENERAL SECTION
+        ========================== */
+
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        section h2 {
+            color: #d4af37;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            max-width: 850px;
+            margin: 10px auto;
+            color: #ddd;
+            font-size: 17px;
+        }
+
+
+        /* =========================
+           HOME
+        ========================== */
+
+        .hero {
+            background: linear-gradient(
+                rgba(0,0,0,0.75),
+                rgba(30,15,10,0.85)
+            );
+
+            min-height: 400px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            padding: 70px 20px;
+        }
+
+        .hero h2 {
+            color: white;
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 19px;
+        }
+
+        .location {
+            margin-top: 10px;
+        }
+
+
+        /* =========================
+           BUTTONS
+        ========================== */
+
+        .button {
+            display: inline-block;
+            background: #d4af37;
+            color: #111;
+            text-decoration: none;
+
+            padding: 13px 25px;
+            margin: 12px 5px;
+
+            border-radius: 6px;
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: white;
+            color: #111;
+            transform: translateY(-2px);
+        }
+
+        .whatsapp {
+            background: #25D366;
+            color: white;
+        }
+
+        .whatsapp:hover {
+            background: white;
+            color: #25D366;
+        }
+
+
+        /* =========================
+           SERVICES
+        ========================== */
+
+        .services {
+            background: #181818;
+        }
+
+        .service-container {
+            max-width: 1100px;
+            margin: 30px auto 0;
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .service-card {
+            background: #222;
+            padding: 30px 20px;
+
+            border-radius: 12px;
+            border: 1px solid #444;
+
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-7px);
+            border-color: #d4af37;
+        }
+
+        .service-card h3 {
+            color: #d4af37;
+            margin-bottom: 12px;
+            font-size: 22px;
+        }
+
+        .service-card p {
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================== */
+
+        .about {
+            background: #111;
+        }
+
+        .about-box {
+            max-width: 950px;
+            margin: auto;
+        }
+
+        .about-box h3 {
+            color: #d4af37;
+            margin-top: 25px;
+            font-size: 22px;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================== */
+
+        .contact {
+            background: #181818;
+        }
+
+        .contact-box {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .contact-item {
+            margin: 18px 0;
+            font-size: 18px;
+        }
+
+        .contact-item strong {
+            color: #d4af37;
+        }
+
+
+        /* =========================
+           GALLERY
+        ========================== */
+
+        .gallery-section {
+            background: #111;
+        }
+
+        .gallery {
+            max-width: 1100px;
+            margin: 30px auto;
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 15px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 200px;
+
+            object-fit: cover;
+
+            border-radius: 10px;
+
+            display: block;
+
+            border: 2px solid transparent;
+
+            transition: 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.03);
+            border-color: #d4af37;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            background: #050505;
+            text-align: center;
+            padding: 30px 20px;
+            border-top: 1px solid #333;
+        }
+
+        footer h3 {
+            color: #d4af37;
+            margin-bottom: 8px;
+        }
+
+        footer p {
+            color: #aaa;
+            margin: 5px;
+        }
+
+
+        /* =========================
+           MOBILE RESPONSIVE
+        ========================== */
+
+        @media (max-width: 900px) {
+
+            .service-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gallery {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .feature-image {
+                height: 400px;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 23px;
+            }
+
+            header img.logo {
+                width: 120px;
+            }
+
+            nav {
+                gap: 3px;
+            }
+
+            nav a {
+                padding: 8px 9px;
+                font-size: 14px;
+            }
+
+            .feature-image {
+                height: 260px;
+            }
+
+            .hero {
+                min-height: 350px;
+                padding: 50px 15px;
+            }
+
+            .hero h2 {
+                font-size: 30px;
+            }
+
+            section h2 {
+                font-size: 27px;
+            }
+
+            .service-container {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+
+            .gallery img {
+                height: 150px;
+            }
+
+            .button {
+                padding: 11px 18px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header>
+
+        <img
+            class="logo"
+            src="image/logo.jpg"
+            alt="New Style Gents Beauty Parlour Logo"
+        >
+
+        <h1>New Style Gents Beauty Parlour</h1>
+
+        <!-- MAIN MENU -->
+
+        <nav>
+
+            <a href="#home">Home</a>
+
+            <a href="#services">Services</a>
+
+            <a href="#about">About</a>
+
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         AI FEATURE IMAGE
+    ========================== -->
+
+    <img
+        class="feature-image"
+        src="image/ai.jpeg"
+        alt="New Style Gents Beauty Parlour"
+    >
+
+
+    <!-- =========================
+         HOME
+    ========================== -->
+
+    <section class="hero" id="home">
+
+        <h2>Professional Grooming for Men</h2>
+
+        <p>
+            Quality Haircut, Beard Styling & Grooming
+        </p>
+
+        <p class="location">
+            📍 Parsudih, Jamshedpur
+        </p>
+
+        <p>
+            🕐 8:00 AM – 10:00 PM
+        </p>
+
+        <p>
+            Closed every Thursday
+        </p>
+
+
+        <div>
+
+            <a
+                href="https://wa.me/919234774592?text=Hello%20New%20Style%20Gents%20Beauty%20Parlour,%20I%20want%20to%20book%20an%20appointment."
+                target="_blank"
+                class="button whatsapp"
+            >
+                📱 Book Appointment
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SERVICES
+    ========================== -->
+
+    <section class="services" id="services">
+
+        <h2>Our Services</h2>
+
+        <p>
+            Professional grooming services for men.
+            We focus on quality, style and customer satisfaction.
+        </p>
+
+
+        <div class="service-container">
+
+
+            <!-- HAIRCUT -->
+
+            <div class="service-card">
+
+                <h3>✂️ Haircut</h3>
+
+                <p>
+                    Stylish and professional haircuts
+                    according to your preferred look.
+                </p>
+
+            </div>
+
+
+            <!-- BEARD -->
+
+            <div class="service-card">
+
+                <h3>🪒 Beard & Shaving</h3>
+
+                <p>
+                    Beard trimming, styling and
+                    clean professional shaving.
+                </p>
+
+            </div>
+
+
+            <!-- FACIAL -->
+
+            <div class="service-card">
+
+                <h3>✨ Facial</h3>
+
+                <p>
+                    Grooming and facial care
+                    for a fresh and clean look.
+                </p>
+
+            </div>
+
+
+            <!-- HAIR SPA -->
+
+            <div class="service-card">
+
+                <h3>💆 Hair Spa</h3>
+
+                <p>
+                    Relaxing hair spa and grooming
+                    care for healthy-looking hair.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT US
+    ========================== -->
+
+    <section class="about" id="about">
+
+        <h2>About Us</h2>
+
+
+        <div class="about-box">
+
+            <p>
+                Welcome to
+                <strong>New Style Gents Beauty Parlour</strong>,
+                a men's grooming and beauty parlour located in
+                Parsudih, Jamshedpur.
+            </p>
+
+            <p>
+                We provide quality haircut, beard styling,
+                shaving, facial and hair spa services in a
+                comfortable and friendly environment.
+            </p>
+
+            <p>
+                Our goal is simple — to provide every customer
+                with a clean, stylish and professional grooming
+                experience.
+            </p>
+
+
+            <h3>Our Location</h3>
+
+            <p>
+                📍 Q637+W8F, Cinema Road,
+                Haludban, Parsudih,
+                Jamshedpur, Jharkhand 831002
+            </p>
+
+
+            <h3>Opening Hours</h3>
+
+            <p>
+                Monday – Wednesday:
+                8:00 AM – 10:00 PM
+            </p>
+
+            <p>
+                Thursday: Closed
+            </p>
+
+            <p>
+                Friday – Sunday:
+                8:00 AM – 10:00 PM
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section class="contact" id="contact">
+
+        <h2>Contact Us</h2>
+
+
+        <div class="contact-box">
+
+
+            <div class="contact-item">
+
+                <strong>📍 Address</strong>
+
+                <p>
+                    Q637+W8F, Cinema Road,
+                    Haludban, Parsudih,
+                    Jamshedpur, Jharkhand 831002
+                </p>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <strong>📞 Phone</strong>
+
+                <p>
+                    +91 92347 74592
+                </p>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <strong>🕐 Opening Hours</strong>
+
+                <p>
+                    8:00 AM – 10:00 PM
+                </p>
+
+                <p>
+                    Thursday Closed
+                </p>
+
+            </div>
+
+
+            <!-- CALL -->
+
+            <a
+                href="tel:+919234774592"
+                class="button"
+            >
+                📞 Call Now
+            </a>
+
+
+            <!-- WHATSAPP -->
+
+            <a
+                href="https://wa.me/919234774592?text=Hello%20New%20Style%20Gents%20Beauty%20Parlour"
+                target="_blank"
+                class="button whatsapp"
+            >
+                💬 WhatsApp
+            </a>
+
+
+            <!-- GOOGLE MAPS -->
+
+            <a
+                href="https://share.google/DTF5E7u9LPCJMvAVH"
+                target="_blank"
+                class="button"
+            >
+                📍 Google Maps
+            </a>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         GALLERY
+    ========================== -->
+
+    <section class="gallery-section" id="gallery">
+
+        <h2>Our Gallery</h2>
+
+        <p>
+            Take a look at New Style Gents Beauty Parlour.
+        </p>
+
+
+        <div class="gallery">
+
+
+            <img
+                src="image/shop 2.jpeg"
+                alt="New Style Gents Beauty Parlour"
+            >
+
+
+            <img
+                src="image/shop 3.jpeg"
+                alt="New Style Gents Beauty Parlour"
+            >
+
+
+            <img
+                src="image/shop 4.jpeg"
+                alt="New Style Gents Beauty Parlour"
+            >
+
+
+            <img
+                src="image/shop 5.png"
+                alt="New Style Gents Beauty Parlour"
+            >
+
+
+            <img
+                src="image/shop 6.jpeg"
+                alt="New Style Gents Beauty Parlour"
+            >
+
+
+            <img
+                src="image/shop 7.jpeg"
+                alt="New Style Gents Beauty Parlour"
+            >
+
+
+            <img
+                src="image/shop 8.jpeg"
+                alt="New Style Gents Beauty Parlour"
+            >
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <h3>New Style Gents Beauty Parlour</h3>
+
+        <p>
+            Professional Men's Grooming & Beauty Services
+        </p>
+
+        <p>
+            📍 Parsudih, Jamshedpur
+        </p>
+
+        <p>
+            📞 +91 92347 74592
+        </p>
+
+        <p>
+            © 2026 New Style Gents Beauty Parlour.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+</html>
